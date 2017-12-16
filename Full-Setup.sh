@@ -328,6 +328,20 @@ wget "https://raw.githubusercontent.com/rasta-team/Full-Debian7-32bit/master/men
 mv ./menu /usr/local/bin/menu
 chmod +x /usr/local/bin/menu
 
+# shc file
+cd
+apt-get install make
+cd
+wget https://raw.githubusercontent.com/yusuf-ardiansyah/debian/master/shc-3.8.7.tgz
+tar xvfz shc-3.8.7.tgz
+cd shc-3.8.7
+make
+./shc -f /usr/local/bin/menu
+cd
+mv /usr/local/bin/menu.x /usr/local/bin/menu
+chmod +x /usr/local/bin/menu
+cd
+
 # swap ram
 dd if=/dev/zero of=/swapfile bs=1024 count=1024k
 # buat swap
@@ -369,15 +383,13 @@ clear
 echo "========================================" | lolcat
 echo "Service Setup by Rasta-Team (Abe Pang)" | lolcat
 echo "----------------------------------------" | lolcat
-echo "OpenVPN  : TCP 1194 (client config : http://$MYIP:81/client.ovpn)"  | tee -a log-install.txt
+echo "OpenVPN  : TCP 55 (client config : http://$MYIP:81/client.ovpn)"  | tee -a log-install.txt
 echo "OpenSSH  : 22"  | tee -a log-install.txt
 echo "Dropbear : 443"  | tee -a log-install.txt
-echo "Squid3   : 8080, 3128 (limit to IP SSH)"  | tee -a log-install.txt
+echo "Squid3   : 8080 (limit to IP SSH)"  | tee -a log-install.txt
 echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
 echo "nginx    : 81"  | tee -a log-install.txt
 echo "Webmin   : http://$MYIP:10000/"| tee -a log-install.txt
-echo "vnstat   : http://$MYIP:81/vnstat/"| tee -a log-install.txt
-echo "MRTG     : http://$MYIP:81/mrtg/"| tee -a log-install.txt
 echo "Timezone : Asia/Kuala Lumpur"| tee -a log-install.txt
 echo "Fail2Ban : [on]"  | tee -a log-install.txt
 echo "IPv6     : [off]"  | tee -a log-install.txt

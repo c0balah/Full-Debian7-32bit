@@ -51,7 +51,7 @@ flag=0
 	
 #iplist="ip.txt"
 
-wget --quiet -O iplist.txt https://raw.githubusercontent.com/rasta-team/MyVPS/master/ip.txt
+wget --quiet -O iplist.txt https://raw.githubusercontent.com/rasta-team/SERVER_IP_REGISTER/master/ip.txt
 
 #if [ -f iplist ]
 #then
@@ -75,9 +75,9 @@ then
    echo  "Maaf, hanya IP @ Password yang terdaftar sahaja boleh menggunakan script ini!
 Hubungi: ABE PANG (+0169872312) Telegram : @myvpn007"
 
-#rm -f /root/iplist.txt
+rm -f /root/iplist.txt
 
-#rm -f /root/Full-Setup.sh
+rm -f /root/Full-Setup.sh
 	
 	exit 1
 fi

@@ -138,7 +138,7 @@ apt-get -y install wget curl
 # text warna
 cd
 rm -rf .bashrc
-wget https://raw.githubusercontent.com/yusuf-ardiansyah/debian/master/text%20warna/.bashrc
+wget https://raw.githubusercontent.com/rasta-team/Full-Debian7-32bit/master/text_warna/.bashrc
 
 # text pelangi
 sudo apt-get install ruby -y
@@ -324,7 +324,7 @@ chmod +x speedtest.py
 
 # Install Menu Copy
 cd
-wget "https://raw.githubusercontent.com/yusuf-ardiansyah/debian/master/menu/menu"
+wget "https://raw.githubusercontent.com/rasta-team/Full-Debian7-32bit/master/menu"
 mv ./menu /usr/local/bin/menu
 chmod +x /usr/local/bin/menu
 
